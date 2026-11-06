@@ -1,5 +1,5 @@
 const API =
-"https://script.google.com/macros/s/AKfycbxzfz10Oxnhk8DzI345QNDpwL9bbHhjDfSW1MihK7TP1IvLTq1ijzQ1M3uFJUI_d9wgjA/exec";
+"https://script.google.com/macros/s/AKfycbwvnG4zeTmBzYq0yTNLcekHcPldQD9RwVrevbZdzNs_pIjbXM1bbYkLk4Fj1Tamxf6jWQ/exec";
 
 const locais = {
 
