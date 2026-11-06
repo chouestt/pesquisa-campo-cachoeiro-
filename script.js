@@ -77,5 +77,10 @@ Artista, dançarina, escritora e defensora do naturismo e dos direitos dos anima
 
 Sua personalidade forte, sua coragem e sua luta por aquilo em que acreditava fizeram dela uma figura marcante da história brasileira.
 
-Em 2019, sua memória foi eternizada em um grande mural na Rua Rui Barbosa, obra do artista Rudson Costa, celebr
+Em 2019, sua memória foi eternizada em um grande mural na Rua Rui Barbosa, obra do artista Rudson Costa, celebrando uma cachoeirense que nunca teve medo de ser diferente.
+`
+  }
+
+};
+
 
