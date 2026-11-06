@@ -82,5 +82,128 @@ Em 2019, sua memória foi eternizada em um grande mural na Rua Rui Barbosa, obra
   }
 
 };
+const params = new URLSearchParams(window.location.search);
+
+const localId = params.get("local");
+
+const local = locais[localId];
+
+if(local){
+
+document.getElementById("conteudo").innerHTML = `
+
+<h2>${local.nome}</h2>
+
+<img src="${local.imagem}" alt="${local.nome}">
+
+<p>${local.texto}</p>
+
+`;
+
+}else{
+
+document.getElementById("conteudo").innerHTML = `
+
+<h2>🔬 Pesquisa de Campo</h2>
+
+<p>
+Escaneie um QR Code para iniciar sua Pesquisa de Campo.
+</p>
+
+`;
+
+}
+
+function registrar(){
+
+if(!local){
+
+alert("Abra a página através de um QR Code válido.");
+
+return;
+
+}
+
+const nick =
+document.getElementById("nick").value.trim();
+
+if(!nick){
+
+alert("Digite seu Nick Pokémon GO.");
+
+return;
+
+}
+
+fetch(API,{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body: JSON.stringify({
+
+nick:nick,
+
+local:local.nome
+
+})
+
+})
+
+.then(r => r.json())
+
+.then(d => {
+
+if(d.status === "duplicado"){
+
+document.getElementById("msg").innerHTML =
+
+"⚠️ Você já registrou este local.";
+
+return;
+
+}
+
+if(d.concluido){
+
+document.getElementById("msg").innerHTML =
+
+`
+🎉 Pesquisa de Campo Concluída!
+
+Você visitou todos os locais históricos.
+
+Apresente esta tela à organização para ganhar seu giro na roleta.
+`;
+
+}else{
+
+document.getElementById("msg").innerHTML =
+
+`
+✅ Pesquisa registrada!
+
+Progresso: ${d.pontos}/6
+`;
+
+}
+
+})
+
+.catch(err => {
+
+console.error(err);
+
+document.getElementById("msg").innerHTML =
+
+"❌ Erro ao registrar pesquisa.";
+
+});
+
+}
+
 
 
