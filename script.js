@@ -1,5 +1,5 @@
 const API =
-"https://script.google.com/macros/s/AKfycbyQIjaKeePKqQjchfLqqPBOZCbbseQZfZtFyzxZ-un-TP6t3B6av3OuQh6hg2k0-mFkpw/exec";
+"https://script.google.com/macros/s/AKfycbwvnG4zeTmBzYq0yTNLcekHcPldQD9RwVrevbZdzNs_pIjbXM1bbYkLk4Fj1Tamxf6jWQ/exec";
 
 const META = 5;
 
@@ -7,7 +7,7 @@ const locais = {
 
 estrela: {
 nome: "Campo Estrela – Estádio Mário Monteiro (Sumaré)",
-imagem: "https://www.zerozero.pt/img/estadios/18/1418_ori__20150514152329_estadio_do_sumare.jpg",
+imagem: "https://files.ndeal.app/api/images/proxy?format=webp&quality=100&src=https://www.netdeal.com.br/api/images/producao.spayce.com.br/1774892941411_2021_09_02_estadio_do_sumare_pode_ir_a_leilao_em_cachoeiro_595145_article.jpg",
 texto: `
 O Estrela do Norte Futebol Clube é uma das instituições esportivas mais tradicionais de Cachoeiro de Itapemirim.
 
@@ -19,7 +19,7 @@ Seu estádio, conhecido como Sumaré, é um símbolo dessa trajetória e palco d
 
 palacio: {
 nome: "Palácio Bernardino Monteiro",
-imagem: "https://upload.wikimedia.org/wikipedia/commons/8/8c/Edif%C3%ADcio_Bernardino_Monteiro%2C_Cachoeiro_de_Itapemirim_ES.jpg",
+imagem: "https://cdn.esbrasil.com.br/wp-content/uploads/2025/10/palacio-bernardino-monteiro-1.jpg",
 texto: `
 Inaugurado em 1913 para abrigar o Grupo Escolar Bernardino Monteiro, o edifício é um dos patrimônios arquitetônicos mais importantes de Cachoeiro de Itapemirim.
 
@@ -43,7 +43,7 @@ Ao longo de sua história, tornou-se parte da identidade do centro cachoeirense,
 
 gilberto: {
 nome: "Praça Gilberto Machado",
-imagem: "https://diocesecachoeiro.org.br/wp-content/uploads/2020/09/praca-gilberto-machado.jpg",
+imagem: "https://espiritosantonoticias.com.br/wp-content/uploads/2020/07/sdgsdgd-1.jpg",
 texto: `
 A Praça Gilberto Machado é um dos espaços de convivência de Cachoeiro de Itapemirim e também possui um significado especial para a comunidade Pokémon GO.
 
@@ -71,7 +71,7 @@ Entre um Pokémon e outro, foram construídas amizades e lembranças que fazem d
 
 luz: {
 nome: "Mural Luz del Fuego",
-imagem: "https://noticias.r7.com/files/2019/03/luz-del-fuego-cachoeiro.jpg",
+imagem: "https://caminhagente.com.br/wp-content/uploads/2020/10/DSC_0266.jpg",
 texto: `
 Dora Vivacqua, conhecida artisticamente como Luz del Fuego, nasceu em Cachoeiro de Itapemirim, em 1917, e tornou-se uma mulher à frente de seu tempo.
 
@@ -160,6 +160,7 @@ function registrar() {
     }
 
   })
+
   .catch(err => {
     console.error(err);
     msg.innerHTML = "❌ Erro ao registrar pesquisa.";
