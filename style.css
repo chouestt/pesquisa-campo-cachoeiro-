@@ -1,13 +1,22 @@
 body {
-    background: #EAF2FA;
+    background-color: #EAF2FA;
+    background-image: url("https://lh3.googleusercontent.com/G4R36sxyPnLCi02qJmL2WqZ5NdRMby03NOsaokNAZBesUmv6Oegq59W048N7GrNO5gwLyA-0SiHMnRT8ZzXv0cXOzzsOxbxr-dDDEE-y5A=e365-pa-nu-w5760");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: #34465A;
     font-family: Arial, sans-serif;
     padding: 20px;
+    min-height: 100vh;
 }
 
 .container {
     max-width: 900px;
     margin: auto;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 16px;
+    padding: 20px;
 }
 
 img {
