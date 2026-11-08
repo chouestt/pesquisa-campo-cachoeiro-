@@ -95,7 +95,7 @@ Com seu nome em homenagem ao famoso cronista cachoeirense Rubem Braga, o teatro 
 estacao: {
 nome: "Estação Ferroviária de Cachoeiro de Itapemirim",
 imagem: [
-  "https://www.estacoesferroviarias.com.br/efl_rj_litoral/fotos/cachoeiro052.jpg"
+  "https://www.ipatrimonio.org/wp-content/uploads/2021/01/ipatrimonio_Cachoeiro-de-Itapemirim-Estacao-Ferroviaria-_Imagem-Prefeitura-Municipal-1.jpg"
 ],
 texto: `
 A Estação Ferroviária de Cachoeiro de Itapemirim teve papel importante no desenvolvimento econômico e urbano da cidade.
