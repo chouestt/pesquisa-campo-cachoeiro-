@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Pesquisa Concluída · Área Selvagem 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .parabens { text-align: center; }
+
+    .parabens .banner {
+      display: block;
+      width: 100%;
+      max-height: 280px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 20px;
+    }
+
+    .parabens h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 11vw, 3.6rem);
+      color: #1B4F7C;
+    }
+
+    .parabens .sub {
+      margin: 6px 0 20px;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #2878B8;
+      font-weight: bold;
+    }
+
+    .parabens .nick {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 999px;
+      background: #EAF2FA;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #1B4F7C;
+      margin-bottom: 16px;
+    }
+
+    .parabens p { line-height: 1.6; margin: 0 0 14px; }
+
+    .parabens .hora {
+      font-size: 0.95rem;
+      color: #5B6B7D;
+      margin-bottom: 20px;
+    }
+
+    .parabens .aviso {
+      padding: 16px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #1B4F7C, #2878B8);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.05rem;
+      line-height: 1.5;
+    }
+
+    .confete {
+      position: fixed;
+      top: -20px;
+      width: 10px;
+      height: 16px;
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 10;
+      animation: cair linear 2;
+    }
+
+    @keyframes cair {
+      to { transform: translateY(110vh) rotate(720deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="cartao parabens">
+
+      <img class="banner"
+           src="https://lh3.googleusercontent.com/sVI6taHwIQDdqIC6fHfWToZUBaQop594kFmyBznor6pp57Ru8Gqw65imOPYmaJy30rKO8DQTHK2uIzQegZPAghZmNFmJiyNE07r-ZhJIv8Oj=e365-pa-nu-w5760"
+           alt="Parabéns"
+           onerror="this.style.display='none'">
+
+      <h1>🎉 Parabéns! 🎉</h1>
+      <div class="sub">Pesquisa de Campo concluída</div>
+
+      <div class="nick" id="nick"></div>
+
+      <p>
+        Você visitou <strong id="pontos">5</strong> locais históricos
+        de Cachoeiro de Itapemirim e concluiu a missão da
+        <strong>Área Selvagem 2026</strong>.
+      </p>
+
+      <div class="hora" id="hora"></div>
+
+      <div class="aviso">
+        Apresente esta tela à organização para ganhar seu giro na roleta.
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nick = params.get("nick");
+    const pontos = params.get("pontos");
+
+    if (!nick) {
+      window.location.href = "index.html";
+    }
+
+    document.getElementById("nick").textContent = nick;
+    if (pontos) document.getElementById("pontos").textContent = pontos;
+
+    function atualizarHora() {
+      const agora = new Date();
+      document.getElementById("hora").textContent =
+        agora.toLocaleDateString("pt-BR") + " · " + agora.toLocaleTimeString("pt-BR");
+    }
+    atualizarHora();
+    setInterval(atualizarHora, 1000);
+
+    const cores = ["#2878B8", "#F5C542", "#E4572E", "#4CAF50", "#9C27B0"];
+    for (let i = 0; i < 45; i++) {
+      const c = document.createElement("span");
+      c.className = "confete";
+      c.style.left = Math.random() * 100 + "vw";
+      c.style.background = cores[i % cores.length];
+      c.style.animationDuration = (3 + Math.random() * 3) + "s";
+      c.style.animationDelay = (Math.random() * 2) + "s";
+      document.body.appendChild(c);
+    }
+  </script>
+
+</body>
+</html>
