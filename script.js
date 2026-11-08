@@ -81,6 +81,28 @@ Sua personalidade forte, sua coragem e sua luta por aquilo em que acreditava fiz
 
 Em 2019, sua memória foi eternizada em um grande mural na Rua Rui Barbosa, obra do artista Rudson Costa, celebrando uma cachoeirense que nunca teve medo de ser diferente.
 `
+},
+teatro: {
+nome: "Teatro Rubem Braga",
+imagem: "https://esbrasil.com.br/wp-content/uploads/2020/04/teatro.jpg",
+texto: `
+O Teatro Municipal Rubem Braga é um importante espaço cultural de Cachoeiro de Itapemirim, dedicado à valorização das artes e da cultura.
+
+Com seu nome em homenagem ao famoso cronista cachoeirense Rubem Braga, o teatro recebe apresentações artísticas, espetáculos e eventos culturais, contribuindo para a vida cultural do município.
+`
+},
+
+estacao: {
+nome: "Estação Ferroviária de Cachoeiro de Itapemirim",
+imagem: [
+  "https://www.estacoesferroviarias.com.br/efl_rj_litoral/fotos/cachoeiro9501.jpg",
+  "https://www.estacoesferroviarias.com.br/efl_rj_litoral/fotos/cachoeiro052.jpg"
+],
+texto: `
+A Estação Ferroviária de Cachoeiro de Itapemirim teve papel importante no desenvolvimento econômico e urbano da cidade.
+
+A chegada da ferrovia facilitou o transporte de pessoas e mercadorias, contribuindo especialmente para o crescimento da economia cafeeira e para a ligação de Cachoeiro com outras regiões do Espírito Santo.
+`
 }
 
 };
