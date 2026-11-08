@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>Pesquisa de Campo</title>
-
-<link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Área Selvagem 2026</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<!-- atualização -->
-
 <body>
 
-<div class="container">
+  <div class="container">
 
-<div id="conteudo"></div>
+    <header class="topo">
+      <h1>Área Selvagem 2026</h1>
+      <p class="subtitulo">Pesquisa de Campo · PoGo Cachoeiro</p>
+    </header>
 
-<input
-id="nick"
-placeholder="Seu Nick Pokémon GO">
+    <main class="cartao">
+      <div id="conteudo"></div>
+    </main>
 
-<button onclick="registrar()">
-Registrar Pesquisa
-</button>
+    <section class="cartao">
+      <label for="nick">Seu Nick Pokémon GO</label>
+      <input id="nick" placeholder="Digite seu nick" autocomplete="off">
+      <button onclick="registrar()">Registrar Pesquisa</button>
+      <div id="msg"></div>
+    </section>
 
-<div id="msg"></div>
+  </div>
 
-</div>
-
-<script src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
