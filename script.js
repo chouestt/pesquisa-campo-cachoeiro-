@@ -82,6 +82,7 @@ Sua personalidade forte, sua coragem e sua luta por aquilo em que acreditava fiz
 Em 2019, sua memória foi eternizada em um grande mural na Rua Rui Barbosa, obra do artista Rudson Costa, celebrando uma cachoeirense que nunca teve medo de ser diferente.
 `
 },
+
 teatro: {
 nome: "Teatro Rubem Braga",
 imagem: "https://esbrasil.com.br/wp-content/uploads/2020/04/teatro.jpg",
@@ -112,9 +113,15 @@ const local = locais[localId];
 
 if (local) {
 
+  const fotos = Array.isArray(local.imagem) ? local.imagem : [local.imagem];
+
+  const imagensHtml = fotos
+    .map(src => `<img src="${src}" alt="${local.nome}" onerror="this.style.display='none'">`)
+    .join("");
+
   document.getElementById("conteudo").innerHTML = `
     <h2>${local.nome}</h2>
-    <img src="${local.imagem}" alt="${local.nome}">
+    ${imagensHtml}
     <p>${local.texto.trim().replace(/\n\s*\n/g, "</p><p>")}</p>
   `;
 
@@ -168,20 +175,17 @@ function registrar() {
     }
 
     if (d.concluido) {
-      msg.innerHTML = `
-        🎉 Pesquisa de Campo Concluída!<br><br>
-        Você visitou ${META} locais históricos.<br><br>
-        Apresente esta tela à organização para ganhar seu giro na roleta.
-      `;
-    } else {
-      msg.innerHTML = `
-        ✅ Pesquisa registrada!<br><br>
-        Progresso: ${d.pontos}/${META}
-      `;
+      window.location.href =
+        "parabens.html?nick=" + encodeURIComponent(nick) + "&pontos=" + d.pontos;
+      return;
     }
 
-  })
+    msg.innerHTML = `
+      ✅ Pesquisa registrada!<br><br>
+      Progresso: ${d.pontos}/${META}
+    `;
 
+  })
   .catch(err => {
     console.error(err);
     msg.innerHTML = "❌ Erro ao registrar pesquisa.";
